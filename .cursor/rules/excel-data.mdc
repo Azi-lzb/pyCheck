@@ -1,0 +1,11 @@
+---
+description: Excel 参照表子项目规范
+globs: excel-data/**
+alwaysApply: false
+---
+
+# excel-data 子项目
+
+- 只修改 `excel-data/` 内代码与数据；不在此实现检查程序的业务逻辑。
+- 参照表、Excel 源文件及处理脚本（修复、校验、生成）归属本子项目。
+- 产出物（表结构、列名、编码）需与 `check-program` 的读取约定一致；变更时在 README 或 AGENTS.md 中说明。

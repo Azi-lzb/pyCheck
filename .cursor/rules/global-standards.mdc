@@ -1,0 +1,10 @@
+---
+description: 全项目通用规范
+alwaysApply: true
+---
+
+# 通用规范
+
+- 本仓库为 monorepo：`excel-data/` 负责参照表与 Excel 数据处理，`check-program/` 负责调用数据的检查程序。
+- 不提交密钥、token；不提交无必要的大二进制文件。
+- 修改跨子项目的接口或数据格式时，先确认根 `AGENTS.md` 与各子项目 `AGENTS.md` 的边界说明。

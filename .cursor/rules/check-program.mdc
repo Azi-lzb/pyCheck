@@ -1,0 +1,11 @@
+---
+description: 检查程序子项目规范
+globs: check-program/**
+alwaysApply: false
+---
+
+# check-program 子项目
+
+- 只修改 `check-program/` 内代码；不在此直接改参照表结构或 Excel 源文件。
+- 程序通过约定路径读取 `excel-data/` 产出的数据；表格式变更需在 excel-data 子项目完成并同步说明。
+- 策略、配置、调试脚本与使用说明归属本子项目。
