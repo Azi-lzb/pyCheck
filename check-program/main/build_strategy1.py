@@ -3828,37 +3828,36 @@ def write_results():
                         stat_keys = classify_template_stat_keys(actual_label, customer_label, runtime_settings)
                         group_name = resolve_summary_group_name(summary_sheet_name, cat)
 
-                        for _ in runtime_settings["enabled_bases"]:
-                            if group_name:
-                                append_template_summary_stat(
-                                    template_summary_amounts,
-                                    summary_sheet_name,
-                                    _summary_group_key(group_name),
-                                    "total_amount",
-                                    amount=amount_value_for_summary,
-                                )
-                                append_template_summary_stat(
-                                    template_summary_amounts,
-                                    summary_sheet_name,
-                                    _summary_group_key(group_name),
-                                    "total_count",
-                                    count=1,
-                                )
-                            for reported_code in valid_reported_codes:
-                                append_template_summary_stat(
-                                    template_summary_amounts,
-                                    summary_sheet_name,
-                                    reported_code,
-                                    "total_amount",
-                                    amount=amount_value_for_summary,
-                                )
-                                append_template_summary_stat(
-                                    template_summary_amounts,
-                                    summary_sheet_name,
-                                    reported_code,
-                                    "total_count",
-                                    count=1,
-                                )
+                        if group_name:
+                            append_template_summary_stat(
+                                template_summary_amounts,
+                                summary_sheet_name,
+                                _summary_group_key(group_name),
+                                "total_amount",
+                                amount=amount_value_for_summary,
+                            )
+                            append_template_summary_stat(
+                                template_summary_amounts,
+                                summary_sheet_name,
+                                _summary_group_key(group_name),
+                                "total_count",
+                                count=1,
+                            )
+                        for reported_code in valid_reported_codes:
+                            append_template_summary_stat(
+                                template_summary_amounts,
+                                summary_sheet_name,
+                                reported_code,
+                                "total_amount",
+                                amount=amount_value_for_summary,
+                            )
+                            append_template_summary_stat(
+                                template_summary_amounts,
+                                summary_sheet_name,
+                                reported_code,
+                                "total_count",
+                                count=1,
+                            )
 
                         if group_name:
                             for stat_key in stat_keys:
